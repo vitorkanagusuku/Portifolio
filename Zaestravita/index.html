@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Zaestravita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Zaestravita</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="menu">
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('produtos')">Produtos</a>
+    <a href="#" onclick="showSection('sobre')">Sobre</a>
+    <a href="#" onclick="showSection('contato')">Contato</a>
+  </nav>
+</header>
+
+<section id="home" class="active">
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Limpeza pesada com alta eficiência</h1>
+      <p>Soluções profissionais que facilitam seu dia a dia</p>
+      <button onclick="showSection('produtos')">Ver Produtos</button>
+    </div>
+  </div>
+
+  <h1>Por que escolher a Zaestravita?</h1>
+
+  <div class="features">
+    <div class="feature">
+      <h3>Alta Eficiência</h3>
+      <p>Produtos potentes para sujeiras difíceis</p>
+    </div>
+
+    <div class="feature">
+      <h3>Praticidade</h3>
+      <p>Facilita o seu dia a dia</p>
+    </div>
+
+    <div class="feature">
+      <h3>Qualidade</h3>
+      <p>Resultados profissionais</p>
+    </div>
+  </div>
+</section>
+
+<section id="produtos">
+  <h1>Nossos Produtos</h1>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f">
+      <div class="card-content">
+        <h3>Desengordurante</h3>
+        <p>Remove gordura pesada com facilidade</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec">
+      <div class="card-content">
+        <h3>Limpa Piso</h3>
+        <p>Ideal para limpeza profunda</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585421514738-01798e348b17">
+      <div class="card-content">
+        <h3>Multiuso</h3>
+        <p>Versátil e eficiente no dia a dia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <h1>Sobre a Empresa</h1>
+  <p class="center-text">
+    A Zaestravita oferece soluções modernas para limpeza pesada, focando em eficiência, praticidade e qualidade.
+  </p>
+</section>
+
+<section id="contato">
+  <h1>Contato</h1>
+
+  <form id="form">
+    <input type="text" placeholder="Seu nome" required>
+    <input type="email" placeholder="Seu email" required>
+    <textarea placeholder="Mensagem" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p id="msg" class="success"></p>
+</section>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
