@@ -39,7 +39,7 @@ Estou em constante aprendizado e motivado a desenvolver soluções práticas uti
 | Projeto | Descrição | Link |
 | :--- | :--- | :---: |
 | **ZaestraVita** | Desenvolvimento de um site utilizando HTML, CSS e lógica básica em JavaScript.
-| **ZaestraVita** | Desenvolvimento de um site utilizando HTML, CSS e lógica básica em JavaScript.
+| **CRM Básico** | Desenvolvimento de um site utilizando HTML, CSS e lógica básica em JavaScript, um site de gestão de clientes.
 ---
  
 ### 🏗 Estrutura do Repositório
