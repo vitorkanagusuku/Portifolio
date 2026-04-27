@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>CRM Minimalista</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>CRM Minimalista</header>
+
+<div class="container">
+
+<aside>
+  <button onclick="showPage('dashboard')">Dashboard</button>
+  <button onclick="showPage('contatos')">Contatos</button>
+  <button onclick="showPage('mensagens')">Mensagens</button>
+</aside>
+
+<main>
+
+<section id="dashboard" class="active">
+  <h1>Dashboard</h1>
+  <div class="cards">
+    <div class="card">Contatos: <span id="totalContatos">0</span></div>
+    <div class="card">Mensagens: <span id="totalMensagens">0</span></div>
+  </div>
+</section>
+
+<section id="contatos">
+  <h1>Contatos</h1>
+
+  <input id="nome" placeholder="Nome">
+  <input id="telefone" placeholder="Telefone">
+  <button onclick="addContato()">Adicionar</button>
+
+  <ul id="listaContatos"></ul>
+</section>
+
+<section id="mensagens">
+  <h1>Mensagens</h1>
+
+  <select id="contatoSelect"></select>
+  <textarea id="mensagem" placeholder="Digite a mensagem"></textarea>
+  <button onclick="enviarMensagem()">Enviar</button>
+
+  <div id="chat"></div>
+</section>
+
+</main>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
