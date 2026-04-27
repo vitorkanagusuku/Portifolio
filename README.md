@@ -38,8 +38,7 @@ Estou em constante aprendizado e motivado a desenvolver soluções práticas uti
 #### 💻 Desenvolvimento Web
 | Projeto | Descrição | Link |
 | :--- | :--- | :---: |
-| **Site Institucional** | Desenvolvimento de um site utilizando HTML, CSS e lógica básica em Java. | [Ver Projeto](./site-web/) |
- 
+| **Site Institucional** | Desenvolvimento de um site utilizando HTML, CSS e lógica básica em JavaScript.
 ---
  
 ### 🏗 Estrutura do Repositório
