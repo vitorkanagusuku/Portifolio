@@ -45,11 +45,4 @@ Durante o desenvolvimento deste projeto, foram adquiridos conhecimentos importan
 ## 👥 Trabalho em Equipe
 
 Projeto desenvolvido em grupo para a disciplina, com colaboração na criação do layout, estrutura e organização do site.
-
----
-
-## 🔧 Como Executar
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/portfolio.git
+----
