@@ -14,7 +14,7 @@ Atualmente cursando o 2º semestre de Análise e Desenvolvimento de Sistemas na 
 
 Estou em constante aprendizado e motivado a desenvolver soluções práticas utilizando tecnologia, com foco em melhorar minhas habilidades e construir projetos reais.
 
-* **Habilidades Técnicas:** Python, SQL, HTML, CSS.
+* **Habilidades Técnicas:** Python, SQL, HTML, CSS, JavaScript.
 * **Habilidades Socioemocionais:** Trabalho em equipe, comunicação e pensamento lógico.
 * **Projetos Relevantes:** Desenvolvimento de um site utilizando HTML, CSS e lógica básica em Java.
  
