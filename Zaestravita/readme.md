@@ -41,3 +41,23 @@ projeto-zaestravita/
 ├── index.html
 ├── style.css
 └── script.js
+
+🧠 Modelo Entidade-Relacionamento (MER)
+
+Diagrama representando a estrutura de dados do sistema:
+
+
+
+
+🧩 Estrutura do MER
+📦 Entidade: Produto
+id (PK)
+nome
+descricao
+imagem_url
+📦 Entidade: Mensagem (Contato)
+id (PK)
+nome
+email
+mensagem
+data_envio
