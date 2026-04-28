@@ -1,5 +1,7 @@
 # 🧼 Projeto Zaestravita - Site Institucional
 
+- Site institucional desenvolvido para apresentar produtos de limpeza profissional, com foco em eficiência, praticidade e qualidade.
+
 ## 📝 Descrição do Projeto
 O Projeto Zaestravita consiste no desenvolvimento de um site institucional para uma empresa fictícia do ramo de produtos de limpeza pesada.
 
