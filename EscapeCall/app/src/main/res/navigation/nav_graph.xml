@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Tela inicial: Criar/Entrar na sala -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.escapecall.app.ui.home.HomeFragment"
+        android:label="EscapeCall"
+        tools:layout="@layout/fragment_home">
+
+        <!-- Ação: Home → Lobby -->
+        <action
+            android:id="@+id/action_homeFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/fade_in_slow"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <!-- Tela de lobby: Aguardando jogadores -->
+    <fragment
+        android:id="@+id/lobbyFragment"
+        android:name="com.escapecall.app.ui.lobby.LobbyFragment"
+        android:label="Sala de Espera"
+        tools:layout="@layout/fragment_lobby">
+
+        <!-- Argumentos recebidos do HomeFragment -->
+        <argument
+            android:name="extra_room_code"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="extra_player_name"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="extra_is_host"
+            app:argType="boolean"
+            android:defaultValue="false" />
+
+    </fragment>
+
+</navigation>

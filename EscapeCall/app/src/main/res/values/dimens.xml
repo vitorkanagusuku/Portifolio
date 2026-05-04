@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Espaçamentos padrão -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+
+    <!-- Margens de tela -->
+    <dimen name="screen_margin">20dp</dimen>
+    <dimen name="screen_margin_top">32dp</dimen>
+
+    <!-- Cards -->
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+
+    <!-- Botões -->
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
+    <dimen name="button_padding_horizontal">24dp</dimen>
+
+    <!-- Textos -->
+    <dimen name="text_size_xs">10sp</dimen>
+    <dimen name="text_size_sm">12sp</dimen>
+    <dimen name="text_size_md">14sp</dimen>
+    <dimen name="text_size_lg">16sp</dimen>
+    <dimen name="text_size_xl">20sp</dimen>
+    <dimen name="text_size_xxl">24sp</dimen>
+    <dimen name="text_size_title">28sp</dimen>
+    <dimen name="text_size_display">36sp</dimen>
+    <dimen name="text_size_hero">48sp</dimen>
+
+    <!-- Ícones -->
+    <dimen name="icon_size_sm">20dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_lg">32dp</dimen>
+    <dimen name="icon_size_xl">48dp</dimen>
+    <dimen name="icon_size_logo">120dp</dimen>
+
+    <!-- Timer -->
+    <dimen name="timer_text_size">40sp</dimen>
+    <dimen name="timer_progress_height">8dp</dimen>
+
+    <!-- Código da sala -->
+    <dimen name="room_code_text_size">36sp</dimen>
+
+    <!-- Avatar do jogador -->
+    <dimen name="player_avatar_size">48dp</dimen>
+    <dimen name="player_item_height">72dp</dimen>
+</resources>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_gradient"
+    tools:context=".ui.game.GameActivity">
+
+    <!-- ─── BARRA SUPERIOR DE STATUS ─────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/layoutTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:background="@color/background_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Botão sair -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExitGame"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="✕"
+            android:textSize="18sp"
+            android:textColor="@color/text_secondary"
+            android:minWidth="0dp"
+            android:paddingHorizontal="8dp" />
+
+        <!-- Progresso do jogo -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp">
+
+            <TextView
+                android:id="@+id/tvPuzzleProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enigma 1 de 3"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressGame"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="4dp"
+                app:trackColor="@color/surface_card"
+                app:indicatorColor="@color/colorPrimary"
+                app:trackCornerRadius="3dp"
+                android:progress="33"
+                android:max="100" />
+
+        </LinearLayout>
+
+        <!-- Pontuação -->
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐ 0 pts"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent_yellow"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@drawable/bg_score_badge"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp" />
+
+    </LinearLayout>
+
+    <!-- ─── TIMER REGRESSIVO ──────────────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/layoutTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:background="@color/background_medium"
+        app:layout_constraintTop_toBottomOf="@id/layoutTopBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏱️"
+                android:textSize="20sp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Tempo restante -->
+            <TextView
+                android:id="@+id/tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05:00"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="@color/timer_green"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_weight="1" />
+
+            <!-- Botão de câmera/vídeo -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToggleVideo"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="📹"
+                android:textSize="20sp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="8dp" />
+
+        </LinearLayout>
+
+        <!-- Barra de progresso do timer -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/timerProgress"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="8dp"
+            app:trackColor="@color/surface_card"
+            app:indicatorColor="@color/timer_green"
+            app:trackCornerRadius="4dp"
+            android:progress="100"
+            android:max="100" />
+
+    </LinearLayout>
+
+    <!-- ─── ÁREA PRINCIPAL DO ENIGMA ─────────────────────────────────────────── -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/layoutTimer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="32dp">
+
+            <!-- Card do Enigma -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPuzzle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="12dp"
+                app:strokeColor="@color/primary_vibrant"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Cabeçalho do enigma -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <!-- Categoria -->
+                        <TextView
+                            android:id="@+id/tvPuzzleCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🧠 Lógica"
+                            android:textSize="12sp"
+                            android:textColor="@color/accent_cyan"
+                            android:background="@drawable/bg_score_badge"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+
+                        <!-- Pontos do enigma -->
+                        <TextView
+                            android:id="@+id/tvPuzzlePoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="150 pts"
+                            android:textSize="12sp"
+                            android:textColor="@color/accent_yellow"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Título do enigma -->
+                    <TextView
+                        android:id="@+id/tvPuzzleTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="O Guardião das Portas"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Descrição do enigma -->
+                    <TextView
+                        android:id="@+id/tvPuzzleDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Descrição do enigma aqui..."
+                        android:textSize="14sp"
+                        android:textColor="@color/text_primary"
+                        android:lineSpacingMultiplier="1.6"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Feedback de resposta -->
+                    <TextView
+                        android:id="@+id/tvFeedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="✅ CORRETO!"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Campo de resposta -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAnswer"
+                        style="@style/Widget.EscapeCall.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Digite sua resposta aqui…"
+                        android:layout_marginBottom="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAnswer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="@color/text_primary"
+                            android:imeOptions="actionDone" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Botões de ação -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Botão de dica -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnHint"
+                            style="@style/Widget.EscapeCall.Button.Outline"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="💡 Dica (3)"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Botão de responder -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSubmitAnswer"
+                            style="@style/Widget.EscapeCall.Button.Secondary"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="2"
+                            android:text="✓ Responder"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card de dica para videoconferência -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/surface_card"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📹"
+                        android:textSize="22sp"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Videoconferência ativa"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Toque em 📹 para abrir/minimizar"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_secondary" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/bg_timer_circle" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

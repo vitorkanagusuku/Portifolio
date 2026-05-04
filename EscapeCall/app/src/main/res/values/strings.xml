@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nome do app -->
+    <string name="app_name">EscapeCall</string>
+
+    <!-- Splash -->
+    <string name="splash_tagline">Resolva enigmas. Em grupo. Ao vivo.</string>
+    <string name="loading">Preparando a aventura…</string>
+
+    <!-- Home -->
+    <string name="welcome_title">Bem-vindo ao\nEscapeCall! 🔐</string>
+    <string name="welcome_subtitle">Videoconferência + Escape Room\nDesafie seus amigos ao vivo!</string>
+    <string name="tab_create">Criar Sala</string>
+    <string name="tab_join">Entrar</string>
+    <string name="player_name_hint">Seu nome de jogador</string>
+    <string name="room_code_hint">Código da sala (6 dígitos)</string>
+    <string name="create_room_title">Criar Nova Sala</string>
+    <string name="create_room_subtitle">Você será o host da sala e poderá convidar amigos</string>
+    <string name="join_room_title">Entrar em uma Sala</string>
+    <string name="join_room_subtitle">Digite o código compartilhado pelo host</string>
+    <string name="btn_create_room">🚀 Criar Sala</string>
+    <string name="btn_join_room">🔑 Entrar na Sala</string>
+
+    <!-- Erros de validação -->
+    <string name="error_name_too_short">Nome deve ter pelo menos 2 caracteres</string>
+    <string name="error_name_too_long">Nome deve ter no máximo 20 caracteres</string>
+    <string name="error_invalid_code">Código deve ter exatamente 6 caracteres</string>
+
+    <!-- Lobby -->
+    <string name="lobby_title">Sala de Espera</string>
+    <string name="share_code_label">Compartilhe este código:</string>
+    <string name="copy_code">Copiar</string>
+    <string name="players_title">Jogadores na Sala</string>
+    <string name="btn_ready">Marcar como Pronto</string>
+    <string name="btn_ready_done">✓ Pronto!</string>
+    <string name="btn_start_game">▶ Iniciar Jogo</string>
+    <string name="waiting_for_host">Aguardando o host iniciar o jogo…</string>
+    <string name="how_to_play_title">Como Jogar</string>
+    <string name="how_to_play_text">1. Todos os jogadores entram na videochamada\n2. Um enigma aparece na tela de todos\n3. Discutam e resolvam juntos!\n4. Quem acertar ganha pontos\n5. Completem todos os enigmas no menor tempo!</string>
+
+    <!-- Jogo -->
+    <string name="game_title">EscapeCall</string>
+    <string name="puzzle_progress">Enigma %1$d de %2$d</string>
+    <string name="answer_hint">Digite sua resposta aqui…</string>
+    <string name="btn_submit">Responder</string>
+    <string name="btn_hint">💡 Dica</string>
+    <string name="btn_toggle_video">📹 Câmera</string>
+    <string name="btn_exit">Sair</string>
+    <string name="score_label">Pontuação</string>
+    <string name="timer_label">Tempo</string>
+
+    <!-- Resultado -->
+    <string name="result_title">Resultado Final</string>
+    <string name="total_score_label">Pontuação Total</string>
+    <string name="puzzles_solved_label">Enigmas Resolvidos</string>
+    <string name="time_elapsed_label">Tempo Total</string>
+    <string name="completion_label">Conclusão</string>
+    <string name="btn_play_again">🔄 Jogar Novamente</string>
+    <string name="btn_share">📤 Compartilhar</string>
+    <string name="btn_home">🏠 Início</string>
+
+    <!-- Conteúdo de acessibilidade -->
+    <string name="logo_description">Logo do EscapeCall</string>
+    <string name="hero_image_description">Ilustração de escape room</string>
+</resources>

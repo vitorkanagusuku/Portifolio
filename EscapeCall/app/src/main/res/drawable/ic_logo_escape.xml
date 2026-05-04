@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ícone do EscapeCall: cadeado com símbolo de câmera -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Fundo circular -->
+    <path
+        android:fillColor="#2D1B69"
+        android:pathData="M60,5 A55,55 0 1,1 59.99,5 Z" />
+
+    <!-- Cadeado - corpo -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M38,55 L38,85 Q38,90 43,90 L77,90 Q82,90 82,85 L82,55 Q82,50 77,50 L43,50 Q38,50 38,55 Z" />
+
+    <!-- Cadeado - arco -->
+    <path
+        android:fillColor="none"
+        android:strokeColor="#FFD700"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M44,50 L44,38 Q44,25 60,25 Q76,25 76,38 L76,50" />
+
+    <!-- Buraco do cadeado -->
+    <path
+        android:fillColor="#2D1B69"
+        android:pathData="M60,62 A6,6 0 1,1 59.99,62 Z" />
+
+    <!-- Linha do buraco -->
+    <path
+        android:fillColor="#2D1B69"
+        android:pathData="M57,68 L63,68 L63,78 L57,78 Z" />
+
+    <!-- Símbolo de câmera (pequeno, no canto) -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M72,28 Q72,24 76,24 L86,24 Q90,24 90,28 L90,36 Q90,40 86,40 L76,40 Q72,40 72,36 Z" />
+    <path
+        android:fillColor="#2D1B69"
+        android:pathData="M81,26 A4,4 0 1,1 80.99,26 Z" />
+
+</vector>
