@@ -100,9 +100,9 @@ A atividade teve foco nos seguintes critérios:
 
 A imagem abaixo representa um dos resultados visuais criados durante a atividade.
 
-![Imagem Barroco Marte](./imagem-barroco-marte.jpg)
+![Imagem Barroco Marte](./imagem_2026-05-18_184151651.png)
 
-📎 [Abrir imagem em JPG](./imagem-barroco-marte.jpg)
+📎 [Abrir imagem em JPG](./imagem_2026-05-18_184151651.png)
 
 ---
 
